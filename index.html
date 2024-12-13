@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITVEDANT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+  .card-info-carosuel  {
+/* display: inline-block; */
+font-size: 14px !important;
+text-align: justify;
+float: left;
+}
+.card-info-carosuel p,span,h3{
+padding-left: 4%;
+padding-right: 4%;
+font-size: 85%
+}
+.team-cards-carosuel{
+float: left;
+padding-bottom: 6rem;
+/* background-color: #ecf1f5; */
+
+}
+</style>
+</head>
+<body>
+
+  <button class="sideway g-review-mob-web" id="modal_view_left" data-toggle="modal" data-target="#get_quote_modal">
+    <ul>
+        <li><img loading="lazy" data-src="https://www.itvedant.com/images/google-review.svg" alt="" class="mob-review-lg lazyloaded" src="https://www.itvedant.com/images/google-review.svg"></li>
+        <li><img loading="lazy" data-src="https://www.itvedant.com/images/google-reviews/g-icon-star.svg" alt="" class="mob-review-sm lazyload"></li>
+        <li><span>Reviews!</span></li>
+        <li><img loading="lazy" data-src="https://www.itvedant.com/images/google-reviews/arrow-right-sidebar.svg" alt="" class="arrow-hover lazyloaded" src="https://www.itvedant.com/images/google-reviews/arrow-right-sidebar.svg" style="left: 12px;"></li>
+    </ul>
+</button>
+
+
+
+<div class="navbar" id="#home" style="position: fixed;">
+    <a href="https://www.itvedant.com">
+        <img fetchpriority="high" style="margin-left: 5%;" src="https://www.itvedant.com/images/itv-logo-12.svg" alt="itvedant logo">
+      </a>
+        <div class="right_menu">
+            <!-- <button class="c-guide" data-toggle="modal" data-target="#career-guidence-popup"> Get Career Guidance <img src="https://www.itvedant.com/images/career-guide-icon.svg" alt="arrow"></button> -->
+            <a href="#" target="_self"><i class="bi bi-house-door"></i>Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer;margin-right: 5%;" onclick="openNav()">&#9776;</span>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home"><i class="bi bi-house-door"></i>Home</a>
+  <a href="https://www.itvedant.com/full-stack-developer" target="_blank">Python Full Stack Development</a>
+  <a href="https://www.itvedant.com/java-full-stack-developer-course" target="_blank">Java Full Stack Development</a>
+  <a href="blogs.html">Blogs</a>
+  <!-- Button trigger modal -->
+   <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Log In
+  </a>
+</div>
+
+<!-- Modal popup -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-reg">
+          <!-- Title section -->
+          <div class="title">Log In</div>
+          <div class="content">
+            <!-- Registration form -->
+            <form action="#">
+              <div class="user-details">
+                <!-- Input for Username -->
+                <div class="input-box">
+                  <span class="details">Username</span>
+                  <input type="text" placeholder="Enter your username" required>
+                </div>
+                <!-- Input for Email -->
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="text" placeholder="Enter your email" required>
+                </div>
+                <!-- Input for Phone Number -->
+                <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="text" placeholder="Enter your number" required>
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Password</span>
+                  <input type="password" placeholder="Enter your password" required>
+                </div>
+              </div>
+          
+              <!-- Submit button -->
+              <div class="button">
+                <input type="submit" value="Log In">
+              </div>
+              <hr>
+              <div class="">
+                <a href="sign-in.html">Register Here</a>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- navbar ends -->
+<!-- download brocher-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Download Brochure</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: rgb(221, 224, 224);">
+        <div class="about-info" >
+          <div class="about-img1">
+              <img src="about-img.png" alt="Geeksforgeeks">
+          </div>
+          <div style="padding-left: 7%;">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <!-- Input for Username -->
+            <div class="input-box">
+              <span class="details">Username</span>
+              <input type="text" placeholder="Enter your username" required>
+            </div>
+            <!-- Input for Email -->
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your email" required>
+            </div>              </div>
+      </div>   
+      <center>
+
+        <button class="btn btn-dark" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Download Brochure</button>
+      </center>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color: rgb(221, 224, 224);">
+      <div class="modal-header">
+      </div>
+    <center>
+      <div class="modal-body" >
+Thank You...!     
+     
+</div> 
+<button class="btn btn-dark" data-bs-target="#home" data-bs-toggle="modal">Home</button>
+
+</center>  
+  <div class="modal-footer">
+  </div>
+</div>
+  </div>
+</div>
+<!-- ends here download brocher-->
+<!-- main page starts -->
+<div >
+  <section class="container">
+    <div class="image" style="width: 80%">
+      <img src="itv1.jpg" alt="itvedant image" style="width: 80%; border-radius: 5%; height: 50%;">
+    </div>
+    <div class="text">
+        <h1 class="heading_proper">India’s Leading and Trusted <span>IT Training Institute </span> Offering Classroom &amp; Online Training
+          <div class="asso-with">
+            <span class="more">
+                <u>In association with :</u>
+            </span>
+            <span class="ml-3">
+                <img fetchpriority="high" srcset="https://www.itvedant.com/images/nsdc-banner.png 680w,https://www.itvedant.com/images/nsdc-banner.png 800w" ,="" sizes="(min-width: 600px) 580px" src="https://www.itvedant.com/images/nsdc-banner.png" alt="nsdc banner">
+            </span>
+            <span class="ml-3">
+                <img fetchpriority="high" srcset="https://www.itvedant.com/images/skill-india.png 680w,https://www.itvedant.com/images/skill-india.png 800w" ,="" sizes="(min-width: 600px) 580px" src="https://www.itvedant.com/images/skill-india.png" alt="skill banner">
+            </span>
+            <span class="ml-3">
+                <img fetchpriority="high" srcset="https://www.itvedant.com/images/ibm-banner.svg 680w,https://www.itvedant.com/images/ibm-banner.svg 800w" ,="" sizes="(min-width: 600px) 580px" src="https://www.itvedant.com/images/ibm-banner.svg" alt="ibm logo">
+        
+            </span>
+                <span class="ml-3">
+                <img fetchpriority="high" srcset="https://www.itvedant.com/images/aws-logo.png 680w,https://www.itvedant.com/images/aws-logo.png 800w" ,="" sizes="(min-width: 600px) 580px" src="https://www.itvedant.com/images/aws-logo.png" alt="aws logo">
+            </span>
+        </div> 
+        <div class="social">
+          <div class="rating-fb-google">
+              <img fetchpriority="high" src="https://www.itvedant.com/images/google-reviews/g-icon-star.svg" alt="Google 5 star rating" class="rating-icon">
+              <img loading="lazy" fetchpriority="low" data-src="https://www.itvedant.com/images/google-reviews/g-review.gif" alt="Google 5 star rating" class="rating-gif lazyloaded" src="https://www.itvedant.com/images/google-reviews/g-review.gif">
+          </div>
+        </div>
+        <div class="wrapper justify-content-md-center justify-content-lg-start">
+
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" class="ml-0 brochure-download-modal popup-brochure-form-btn-type" itv-btn-type="banner_download_brochure_submit">Download Brochure
+            <img fetchpriority="high" src="https://www.itvedant.com/images/pdf.svg" alt="Download Brochure"></a>
+        </div>
+        </div>
+        
+  </section>
+
+ 
+
+         <!-- company collap carosuel starts        -->
+ <div class="team1 swiper-wrapper" style="margin-top: -3%;" >
+  <div class="swiper mySwiper-img container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide company-collab" data-bs-interval="1000">
+          <img src="godrej.webp" alt="Snow" style="width:20%">
+        </div>
+        <div class="swiper-slide ">
+          <img src="hcl.webp" alt="company-logo" style="width:10%">
+        </div><div class="swiper-slide">
+          <img src="icici.webp" alt="company-logo" style="width:10%">
+        </div><div class="swiper-slide">
+          <img src="idfc.webp" alt="company-logo" style="width:10%">
+        </div><div class="swiper-slide">
+          <img src="infosys.webp" alt="company-logo" style="width:10%">
+        </div><div class="swiper-slide">
+          <img src="rebit.webp" alt="company-logo" style="width:10%">
+        </div>
+        <div class="swiper-slide ">
+          <img src="hcl.webp" alt="company-logo" style="width:20%">
+        </div><div class="swiper-slide">
+          <img src="icici.webp" alt="company-logo" style="width:20%">
+        </div><div class="swiper-slide">
+          <img src="idfc.webp" alt="company-logo" style="width:20%">
+        </div><div class="swiper-slide">
+          <img src="infosys.webp" alt="company-logo" style="width:20%">
+        </div><div class="swiper-slide">
+          <img src="rebit.webp" alt="company-logo" style="width:20%">
+        </div>
+      </div>
+  
+      </div>
+  </div>
+<!-- company carosuel ends    -->
+       </div>  
+<!-- about us  -->
+<section class="about" id="about">
+  <h1>About Us</h1>
+  <p style="font-weight: bold">
+    To Decode Your Dreams...
+    </p>
+  <div class="about-info">
+      <div class="about-img">
+          <img src="about-img.png" alt="Geeksforgeeks">
+      </div>
+      <div>
+      <p> 
+          <b>When The Efforts Are Genuine, Numbers Speak Louder.</b><br><br>
+          Here at Itvedant, we focus on providing technical knowledge
+           along with building a profile of each and every student with White
+            Glove service and support because the end goal of our team is to make 
+            the students job-ready. Thus, our IT Courses have been proven to be the best for
+             students. We, being one of the most preferred Software Training Institutes in India,
+              work hard on giving our students the best learning experience.
+      </p>
+         <a href="https://www.itvedant.com/" style="padding-left: 4%;"> <button>Read More...</button></a>
+      </div>
+  </div>
+</section>
+
+ <!-- about us ends -->
+<!-- explore course -->
+ <div class="container-course" style="background-color: #3d3c3c;">
+<section class="explore_course">
+  <div class="row">
+    <div class="ex-head">
+      <center><h2>Explore Our World-Class Coding Courses</h2></center> 
+    </div>
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <div class="pop-1 rounded">
+          <img loading="lazy" src="https://www.itvedant.com/images/course/master-in-full-stack.webp" class="rounded img-fluid" alt="Full Stack Developer">
+          <p>#RightChoice</p>
+          <h3>Python Full Stack Development </h3>
+          <div class="mains d-flex justify-content-between">
+            <div class="left">
+              <b>Duration:</b>
+              <div class="imp">
+                <img loading="lazy" src="https://www.itvedant.com/images/clock.svg" alt="Duration">
+                <span>Job Ready in 6 Month</span>
+              </div>
+            </div>
+            <div class="right">
+              <b>Case Studies:</b>
+              <div class="imp">
+                <img loading="lazy" src="https://www.itvedant.com/images/book.svg" alt="Case study" class="img-fluid">
+                <span>15</span>
+              </div>
+            </div>
+          </div>
+       
+          <div class="imp">
+            <img loading="lazy" src="https://www.itvedant.com/images/man.svg" alt="Active Learner">
+            <p><span>574+</span> Active Learners</p>
+          </div>
+          <div class="learns">
+            Learn More <img loading="lazy" src="https://www.itvedant.com/images/learn-more.svg" alt="Learn More">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card card1">
+      <div class="card-body">
+        <div class="pop-1 rounded">
+          <img loading="lazy" src="https://www.itvedant.com/images/course/master-software-data-engineering.webp" class="rounded img-fluid" alt="AWS &amp; Cloud Technology" width="100%" height="100%">
+          <p>#Trending</p>
+          <h3>Java Full Stack Development </h3>
+          <div class="mains d-flex justify-content-between">
+            <div class="left">
+              <b>Duration:</b>
+              <div class="imp">
+                <img loading="lazy" src="https://www.itvedant.com/images/clock.svg" alt="Duration">
+                <span>Job Ready in 6 Month</span>
+              </div>
+            </div>
+            <div class="right">
+              <b>Case Studies:</b>
+              <div class="imp">
+                <img loading="lazy" src="https://www.itvedant.com/images/book.svg" alt="Case study" class="img-fluid">
+                <span>15</span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="imp">
+            <img loading="lazy" src="https://www.itvedant.com/images/man.svg" alt="Active Learner">
+            <p><span>585+</span> Active Learners</p>
+          </div>
+          <div class="learns">
+            Learn More
+            <img loading="lazy" src="https://www.itvedant.com/images/learn-more.svg" alt="Learn More">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+ <!-- ends explore course -->
+<hr>
+<!-- road map starts -->
+ <section class="roadmap" >
+ <br>
+  <div class="ex-head" >
+    <center>
+      <h1></h1><h2>Here’s How Our Course Will Help You Get Your Dream Job </h2></center> 
+  </div>
+ <div class="container">
+  
+  <div class="career-advise-2" id="ad1" style="margin-bottom: 4%;">
+    <span>01</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/advise-1.svg" alt="Career Advice" id="adv1">
+    <h3>Career Advice</h3>
+    <p>A dedicated career expert will guide you by putting light on which course to select based on your interests and qualifications. At Itvedant, we provide our students with an interesting syllabus for our IT Courses.
+    </p>
+  </div>
+
+  <div class="career-advise-2 m-top" id="ad2" style="margin-top: 5%;">
+    <span>02</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/enroll-2.svg" alt="Enrollment" id="adv2">
+    <h3>Enrollment</h3>
+    <p> Once you enroll in the course, a dedicated Relationships Manager will be provided to support you throughout the course completion period.
+    </p>
+  </div>
+
+  <div class="career-advise-2" id="ad3" style="margin-bottom: 4%;">
+    <span>03</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/enroll-3.svg" alt="Follow 3A" id="adv3">
+    <h3>Follow 3A </h3>
+    <p>3A (Attendance, Assignment &amp; Assessment) is a learning model designed by us where student have to score minimum 90%
+    </p>
+  </div>
+
+  <div class="career-advise-2 m-top" id="ad4" style="margin-top: 4%;">
+    <span>04</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/advise-4.svg" alt="Projects" id="adv4">
+    <h3>Projects</h3>
+    <p>Being one of the most desired IT Training Institutes, we provide our students with 30+ Industry oriented projects and case studies to make our students Industry-ready professionals.
+    </p>
+  </div>
+
+  <div class="career-advise-2" id="ad5" style="margin-bottom: 4%;">
+    <span>05</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/advise-5.svg" alt="Interviews" id="adv5">
+    <h3>Interviews </h3>
+    <p>A total of 150+ mocks are planned for each student to prepare them for technical interviews.
+    </p>
+  </div>
+  <div class="career-advise-2 m-top" id="ad7" style="margin-top: 4%;">
+    <span>06</span>
+    <img loading="lazy" class=" ls-is-cached lazyloaded" src="https://www.itvedant.com/images/advise-6.svg" alt="Job" id="adv7">
+    <h3>Job </h3>
+    <p>Itvedant being a trustworthy <a target="_blank" href="https://www.itvedant.com">Software Training Institute</a>, starts working on the interviews for the students’ placements soon after their course completion.
+    </p>
+  </div>
+ </div>
+ </section>
+ <!-- road map ends -->
+ <!-- Swiper -->
+ <section class="team1 container" style=" width: ; background: rgb(224, 251, 222);
+ background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(57, 58, 56) 100%);
+ padding: 30px 0;" >
+  
+  <div class="team-cards-carosuel swiper-wrapper row">
+    <div class="ex-head">
+      <center><h2 style="color: black;">Know how our students are benefiting from us!      </h2></center> 
+    </div>
+      <!-- Cards here -->
+      <!-- Card 1 -->
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+     
+          <div class="swiper-slide">
+              <div class="card">
+                  <div class="card-img">
+                      <img src="card-image.png" alt="card 1">
+                  </div>
+                  <div class="card-info-carosuel">
+                      <span>Hrushikesh Gaikwad </span>
+                      <h3>Software Engineer at Pelican  </h3>
+                      <p class="card-role">I can positively say that Itvedant Education Pvt Ltd has been the best part of my life. What I admire the most is the support that I received from the faculties and the placement team. I had countless opportunities to develop analytical and problem solving skills. I got placed in NSE IT Pvt Ltd and I am really thankful to Itvedant family for my placements.</p>
+  
+                  </div>
+              </div>
+            </div>
+        <div class="swiper-slide">
+          <div class="card ">
+              <div class="card-img">
+                  <img src="card-image.png" alt="card 2">
+              </div>
+              <div class="card-info-carosuel">
+                  <span>Anuja Lakde </span>
+                  <h3>Trainee Data Analyst at NSE </h3>
+                  <p class="card-role">I can positively say that Itvedant Education Pvt Ltd has been the best part of my life. What I admire the most is the support that I received from the faculties and the placement team. I had countless opportunities to develop analytical and problem solving skills. I got placed in NSE IT Pvt Ltd and I am really thankful to Itvedant family for my placements.</p>
+
+              </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+              <div class="card-img">
+                  <img src="card-image.png" alt="card 3">
+              </div>
+              <div class="card-info-carosuel">
+                  <span>Ankita Lad</span>
+                  <h3>Trainee Data Analyst at Aakit Technologies</h3>
+                  <p class="card-role">I can positively say that Itvedant Education Pvt Ltd has been the best part of my life. What I admire the most is the support that I received from the faculties and the placement team. I had countless opportunities to develop analytical and problem solving skills. I got placed in NSE IT Pvt Ltd and I am really thankful to Itvedant family for my placements.</p>
+              </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+              <div class="card-img">
+                  <img src="card-image.png" alt="card 4">
+              </div>
+              <div class="card-info-carosuel">
+                  <span>Sneha S</span>
+                  <h3> Data Scientist at Nielsen </h3>
+                  <p class="card-role">I can positively say that Itvedant Education Pvt Ltd has been the best part of my life. What I admire the most is the support that I received from the faculties and the placement team. I had countless opportunities to develop analytical and problem solving skills. I got placed in NSE IT Pvt Ltd and I am really thankful to Itvedant family for my placements.</p>
+              </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+              <div class="card-img">
+                  <img src="card-image.png" alt="card 5">
+              </div>
+              <div class="card-info-carosuel">
+                  <span>Varsha Sangale</span>
+                  <h3> Angular Developer</h3>
+                  <p class="card-role">I can positively say that Itvedant Education Pvt Ltd has been the best part of my life. What I admire the most is the support that I received from the faculties and the placement team. I had countless opportunities to develop analytical and problem solving skills. I got placed in NSE IT Pvt Ltd and I am really thankful to Itvedant family for my placements.</p>
+              </div>
+          </div>
+        </div>
+    
+      </div>
+</div>
+  </div>
+</section>
+<!-- Swiper JS -->
+<!-- main page ends -->
+
+<!-- contact us page starts -->
+ <section class="contact" >
+<div class="container" id="contact" style="padding: 125px 0 20px 0;" >
+<div class="container-reg">
+  <!-- Title section -->
+  <div class="title">Contact Us</div>
+  <div class="content">
+    <!-- Registration form -->
+    <form action="#">
+      <div class="user-details">
+        <!-- Input for Full Name -->
+        <div class="input-box">
+          <span class="details">First Name</span>
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <!-- Input for Username -->
+        <div class="input-box">
+          <span class="details">Last Name</span>
+          <input type="text" placeholder="Enter your username" required>
+        </div>
+        <!-- Input for Email -->
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <!-- Input for Phone Number -->
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Message</span>
+          <textarea name="message" style="width:100%;" placeholder="Enter your message" required> 
+</textarea>
+        </div>
+      </div>
+  
+      <!-- Submit button -->
+      <div class="button">
+        <input type="submit" value="Send">
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</section>
+<!-- contact us page ends here -->
+
+<!-- footer starts here -->
+
+<footer >
+  <!-- Section: Links  -->
+   
+   <section class="footer" >
+    <div class="foot-list">
+      <img loading="lazy" src="https://www.itvedant.com/images/logo.svg" alt="" srcset="">
+    </div>
+     <div class="container text-center text-md-start mt-5">
+       <!-- Grid row -->
+       <div class="row mt-3">
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+           <!-- Content -->
+           <h6 class="text-uppercase fw-bold">ADDRESS</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color: #7c4dff; height: 2px"
+               />
+            
+              <p>1st Floor, Ishaan Arcade-1, Opposite Gaondevi Mandir,Borivali (West)</p>
+                             
+         </div>
+         <!-- Grid column -->
+
+         <!-- Grid column -->
+         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+           <!-- Links -->
+           
+           <h6 class="text-uppercase fw-bold">EMAIL ID</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color: #7c4dff; height: 2px"
+               />
+           <p>
+             <a class="text-white" href="mailto:mail@itvedant.com?subject=Job Application | Itvedant Education Website">mail@itvedant.com</a>
+           </p>
+          
+         </div>
+         <!-- Grid column -->
+
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+           <!-- Links -->
+           <h6 class="text-uppercase fw-bold">FOR CONTACT</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color: #7c4dff; height: 2px"
+               />
+           <p>
+             <a href="tel:9205004404" class="text-white" target="_blank">9205004404</a>
+           </p>
+           
+         </div>
+         <!-- Grid column -->
+
+         <!-- Grid column -->
+         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+           <!-- Links -->
+           <h6 class="text-uppercase fw-bold">FOLLOW US ON</h6>
+           <hr
+               class="mb-4 mt-0 d-inline-block mx-auto"
+               style="width: 60px; background-color: #7c4dff; height: 2px"
+               />
+               <div>
+                <a class="text-white me-4" href="https://www.facebook.com/itvedant" target="_blank"><img loading="lazy" src="https://www.itvedant.com/images/facebook.svg" alt="facebook"></a>
+            <a class="text-white me-4" href="https://www.instagram.com/itvedant" target="_blank"><img loading="lazy" src="https://www.itvedant.com/images/instagram.svg" alt="instagram"></a>
+            <a class="text-white me-4" href="https://www.linkedin.com/company/itvedant" target="_blank"><img loading="lazy" src="https://www.itvedant.com/images/linkedins.svg" alt="linkedins"></a>
+            <a class="text-white me-4" href="https://www.youtube.com/channel/UCZ-3vm-2NwZiGpFm5TV8lRA" target="_blank"><img loading="lazy" src="https://www.itvedant.com/images/youtube.svg" alt="youtube"></a>
+            <a class="text-white me-4" href="https://api.whatsapp.com/send?phone=919205004404&amp;text=Hi,%20I%20went%20through%20Itvedant's%20website%20and%20came%20to%20know%20about%20a%20course%20which%20I%20am%20interested%20in.%20Need%20more%20assistance%20from%20you.%20Thank%20you" class="" title="WhatsApp Us!" target="_blank" id="fl_whatsapp">
+              <img loading="lazy" src="https://www.itvedant.com/images/whatsapp.svg" alt="whatsapp">
+            </a>
+               </div>
+         </div>
+         <!-- Grid column -->
+       </div>
+       <!-- Grid row -->
+     </div>
+    <!-- Copyright -->
+    <div
+    class="text-center p-3 footer"
+    style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+    <p>&copy; 2024 ITVEDANT. All Rights Reserved.</p>
+</div>
+<!-- Copyright -->
+   </section>
+   <!-- Section: Links  -->
+
+  
+</footer>
+<!-- footer ends here -->
+  <!-- js link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+      <!-- Initialize Swiper -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper-img", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+    });
+  </script>
+</body>
+</html>
